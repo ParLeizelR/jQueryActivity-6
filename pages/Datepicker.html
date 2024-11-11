@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css"> 
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery UI Datepicker - Animations</h1>
+        <div class="row">
+            <div class="col-1">
+                <li>
+                    <ul><a href="../Accordion.html">accordion</a></ul>
+                    <ul><a href="Autocomplete.html">Autocomplete</a></ul>
+                    <ul><a href="Button.html">Button</a></ul>
+                    <ul><a href="Checkboxradio.html">Checkboxradio</a></ul>
+                    <ul><a href="Controlgroup.html">Controlgroup</a></ul>
+                    <ul><a href="Datepicker.html">Datepicker</a></ul>
+                    <ul><a href="Dialog.html">Dialog</a></ul>
+                    <ul><a href="Menu.html">Menu</a></ul>
+                    <ul><a href="Progressbar.html">Progressbar</a></ul>
+                    <ul><a href="Selectmenu.html">Selectmenu</a></ul>
+                    <ul><a href="Slider.html">Slider</a></ul>
+                    <ul><a href="Spinner.html">Spinner</a></ul>
+                    <ul><a href="Tabs.html">Tabs</a></ul>
+                    <ul><a href="Tooltip.html">Tooltip</a></ul>
+                
+                </li>
+            </div>
+           
+<p>Date: <input type="text" id="datepicker" size="30"></p>
+ 
+<p>Animations:<br>
+  <select id="anim">
+    <option value="show">Show (default)</option>
+    <option value="slideDown">Slide down</option>
+    <option value="fadeIn">Fade in</option>
+    <option value="blind">Blind (UI Effect)</option>
+    <option value="bounce">Bounce (UI Effect)</option>
+    <option value="clip">Clip (UI Effect)</option>
+    <option value="drop">Drop (UI Effect)</option>
+    <option value="fold">Fold (UI Effect)</option>
+    <option value="slide">Slide (UI Effect)</option>
+    <option value="">None</option>
+  </select>
+</p>
+ 
+   
+        </div>
+    </div>  
+    
+    <footer>
+        <p>College of Information and Computing Sciences &copy; 2022</p>  
+    </footer>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+        $( function() {
+          $( "#datepicker" ).datepicker();
+          $( "#anim" ).on( "change", function() {
+            $( "#datepicker" ).datepicker( "option", "showAnim", $( this ).val() );
+          });
+        } );
+        </script>
+</body>
+</html>

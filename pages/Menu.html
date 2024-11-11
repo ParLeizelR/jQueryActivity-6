@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="../css/custom.css">
+
+    <style>
+      .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 100vh;
+          text-align: center;
+      }
+
+      .row {
+          display: flex;
+          gap: 20px;
+      }
+
+      .col-1 {
+          margin-right: 20px;
+      }
+
+      .ui-menu { 
+          width: 200px; 
+      }
+
+      .ui-widget-header { 
+          padding: 0.2em; 
+      }
+
+      footer {
+          margin-top: 20px;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery UI Menu - Categories</h1>
+        <div class="row">
+            <div class="col-1">
+                <ul>
+                    <li><a href="../Accordion.html">Accordion</a></li>
+                    <li><a href="Autocomplete.html">Autocomplete</a></li>
+                    <li><a href="Button.html">Button</a></li>
+                    <li><a href="Checkboxradio.html">Checkboxradio</a></li>
+                    <li><a href="Controlgroup.html">Controlgroup</a></li>
+                    <li><a href="Datepicker.html">Datepicker</a></li>
+                    <li><a href="Dialog.html">Dialog</a></li>
+                    <li><a href="Menu.html">Menu</a></li>
+                    <li><a href="Progressbar.html">Progressbar</a></li>
+                    <li><a href="Selectmenu.html">Selectmenu</a></li>
+                    <li><a href="Slider.html">Slider</a></li>
+                    <li><a href="Spinner.html">Spinner</a></li>
+                    <li><a href="Tabs.html">Tabs</a></li>
+                    <li><a href="Tooltip.html">Tooltip</a></li>
+                </ul>
+            </div>
+            <div> 
+                <ul id="menu">
+                  <li class="ui-widget-header"><div>Category 1</div></li>
+                  <li><div>Option 1</div></li>
+                  <li><div>Option 2</div></li>
+                  <li><div>Option 3</div></li>
+                  <li class="ui-widget-header"><div>Category 2</div></li>
+                  <li><div>Option 4</div></li>
+                  <li><div>Option 5</div></li>
+                  <li><div>Option 6</div></li>
+                </ul>
+            </div>
+        </div>
+    </div>  
+
+    <footer>
+        <p>College of Information and Computing Sciences &copy; 2022</p>  
+    </footer>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+      $(function() {
+        $("#menu").menu({
+          items: "> :not(.ui-widget-header)"
+        });
+      });
+    </script>
+</body>
+</html>
